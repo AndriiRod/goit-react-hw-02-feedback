@@ -25,6 +25,8 @@ class App extends Component {
   };
 
   render() {
+    const total = this.countTotalFeedback();
+    const percentPositiveRev = this.countPositiveFeedbackPercentage();
     return (
       <Section title="Please leave feedback">
         <RatingList
@@ -33,8 +35,8 @@ class App extends Component {
         />
         <Statistics
           state={this.state}
-          total={this.countTotalFeedback}
-          procentGoodRev={this.countPositiveFeedbackPercentage}
+          total={total}
+          percentPositiveRev={percentPositiveRev}
         />
       </Section>
     );

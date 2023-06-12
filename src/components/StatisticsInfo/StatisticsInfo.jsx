@@ -1,7 +1,7 @@
 import { InfoList } from './StatisticsInfo.styled';
 import PropTypes from 'prop-types';
 
-const StatisticsInfo = ({ state, total, procentGoodRev }) => {
+const StatisticsInfo = ({ state, total, percentPositiveRev }) => {
   const { good, neutral, bad } = state;
   return (
     <InfoList>
@@ -9,7 +9,7 @@ const StatisticsInfo = ({ state, total, procentGoodRev }) => {
       <li>Neutral: {neutral}</li>
       <li>Bad: {bad}</li>
       <li>Total: {total}</li>
-      <li>Positive feedback: {procentGoodRev()}%</li>
+      <li>Positive feedback: {percentPositiveRev}%</li>
     </InfoList>
   );
 };

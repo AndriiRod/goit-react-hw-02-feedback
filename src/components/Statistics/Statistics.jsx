@@ -3,18 +3,17 @@ import StatisticsInfo from 'components/StatisticsInfo/';
 
 import { StatisticsWrap, SubTitle } from './Statistics.style';
 
-const Statistics = ({ state, total, procentGoodRev }) => {
-  const sum = total();
+const Statistics = ({ state, total, percentPositiveRev }) => {
   return (
     <StatisticsWrap>
       <SubTitle>Statistics</SubTitle>
-      {sum === 0 ? (
+      {total === 0 ? (
         <Notification message="There is no feedback" />
       ) : (
         <StatisticsInfo
           state={state}
-          total={sum}
-          procentGoodRev={procentGoodRev}
+          total={total}
+          percentPositiveRev={percentPositiveRev}
         />
       )}
     </StatisticsWrap>
